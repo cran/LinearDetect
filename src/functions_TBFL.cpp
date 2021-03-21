@@ -135,12 +135,12 @@ List lm_break_fit_block(NumericMatrix data_y, NumericMatrix data_x, double lambd
                 // Rcout << i << "\n";
                 // Rcout << fabs( min_eigen) << "\n"; 
             	// add_pd = fabs( min_eigen) + pow(10, -3);
-            	add_pd = fabs( min_eigen) + pow(10, -6);
+            	add_pd = fabs( min_eigen) + pow(10.0, -6.0);
                 // Rcout << fabs( add_pd) << "\n"; 
                 // add_pd = pow(10, -3); 
             }
             else
-            	add_pd = pow(10, -6);           
+            	add_pd = pow(10.0, -6.0);           
         }        
         arma::mat noise(p_x, p_x, fill::eye);
         D_sum_new_inv(  span((i-1)*p_x, (i*p_x) -1  ), span::all )  = inv( D_sum_new( span((i-1)*p_x, (i*p_x) -1  ), span::all  ) +  add_pd*noise );
@@ -245,7 +245,7 @@ List lm_break_fit_block(NumericMatrix data_y, NumericMatrix data_x, double lambd
             // Rprintf( "%f \n", max_temp);
 
         }
-        if (  max_temp > pow(10, 5)) {
+        if (  max_temp > pow(10.0, 5.0)) {
             flag = 1;
             break;
         }
@@ -367,7 +367,7 @@ arma::mat lm_break_fit_block_new(arma::mat data_y, arma::mat data_x, double lamb
             	add_pd = (10)*fabs( min_eigen);
             }
             else
-            	add_pd = pow(10, -6);          
+            	add_pd = pow(10.0, -6.0);          
         }    
         arma::mat noise(p_x, p_x, fill::eye);
         D_sum_new_inv(  span((i-1)*p_x, (i*p_x) -1  ), span::all )  = inv( D_sum_new( span((i-1)*p_x, (i*p_x) -1  ), span::all  ) +  add_pd*noise );
@@ -454,7 +454,7 @@ arma::mat lm_break_fit_block_new(arma::mat data_y, arma::mat data_x, double lamb
             // Rprintf( "%f \n", max_temp);
 
         }
-        if (  max_temp > pow(10, 5)) {
+        if (  max_temp > pow(10.0, 5.0)) {
             flag = 1;
             break;
         }
@@ -632,7 +632,7 @@ List lm_partial_break_fit_block(NumericMatrix data_y, NumericMatrix data_x, doub
 	            	add_pd = (10)*fabs( min_eigen);
 	            }
 	            else
-	            	add_pd = pow(10, -6);            
+	            	add_pd = pow(10.0, -6.0);            
 	        }
 	        arma::mat noise(p_x,p_x, fill::eye);
 	        D_sum_new_inv(  span((i-1)*p_x, (i*p_x) -1  ), span::all )  = inv( D_sum_new( span((i-1)*p_x, (i*p_x) -1  ), span::all  ) +  add_pd*noise );
@@ -736,7 +736,7 @@ List lm_partial_break_fit_block(NumericMatrix data_y, NumericMatrix data_x, doub
             // Rprintf( "%f \n", max_temp);
 
         }
-        if (  max_temp > pow(10, 5)) {
+        if (  max_temp > pow(10.0, 5.0)) {
             flag = 1;
             break;
         }
@@ -857,7 +857,7 @@ List var_break_fit_block(NumericMatrix data, double lambda, double lambda2, int 
             	add_pd = (10)*fabs( min_eigen);
             }
             else
-            	add_pd = pow(10, -6); 
+            	add_pd = pow(10.0, -6.0); 
         }
         arma::mat noise(p*q,p*q, fill::eye);
         D_sum_new_inv(  span((i-1)*p*q, (i*p*q) -1  ), span::all )  = inv( D_sum_new( span((i-1)*p*q, (i*p*q) -1  ), span::all  ) +  add_pd*noise );
@@ -952,7 +952,7 @@ List var_break_fit_block(NumericMatrix data, double lambda, double lambda2, int 
             phi_hat = phi_new;    
             // Rprintf( "%f \n", max_temp);
         }
-        if (  max_temp > pow(10, 5)) {
+        if (  max_temp > pow(10.0, 5.0)) {
             Rprintf("NOT CONVERGED");
             flag = 1;
             break;

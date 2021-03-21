@@ -1,4 +1,4 @@
-7ddf3ede1c9dad53c3285c2c14ada64b *DESCRIPTION
+07067884395e87ba5482322a5a09c1ea *DESCRIPTION
 6787a503346e21b4a81182282eaa14b4 *NAMESPACE
 90327b9bd19529bef1c4704f77178a47 *R/LinearDetect-package.R
 fccb6516e05e5ee11b3b6a0b8810423f *R/RcppExports.R
@@ -31,5 +31,5 @@ a6a82cf5796eb701266fbbf59e7ed139 *man/var.second.step.search.Rd
 52551054999dde7d2dab984b359c2dd1 *src/Makevars
 2a6f9e9e044a78154d3cfda5936d6f48 *src/Makevars.win
 63b88b859404e56cc486bae14bbc3b70 *src/RcppExports.cpp
-7ad0b9dd5a9529dd58cfe4c06bf25ad0 *src/functions_TBFL.cpp
+e9a9576eac84151eeca09826cb8f4b39 *src/functions_TBFL.cpp
 b8323489d8483c8d2f6ef180975cb7aa *vignettes/my-vignette.Rmd
